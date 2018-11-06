@@ -122,7 +122,7 @@
         _targetPeripheral.delegate = self;
         [central connectPeripheral:_targetPeripheral options:@{CBConnectPeripheralOptionNotifyOnDisconnectionKey:@YES}];
         
-        [self.labelMessage performSelectorOnMainThread:@selector(setText:) withObject:@"Connectting to target Oximeter..." waitUntilDone:NO];
+        [self.labelMessage performSelectorOnMainThread:@selector(setText:) withObject:@"Connecting to target Oximeter..." waitUntilDone:NO];
 
     }
 }
@@ -133,7 +133,7 @@
     
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        self.labelMessage.text = @"Connectted to target Oximeter...";
+        self.labelMessage.text = @"Connected to target Oximeter...";
         [self.btnDisconnect setHidden:NO];
     });
 }
